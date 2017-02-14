@@ -27,14 +27,13 @@
     }
 
     public function get_type($id) {
-      $this->db->select('last_name');
-      $this->db->from('person');
-      $this->db->where('id', $id);
+      $this->db->select('type');
+      $this->db->from('person_type');
+      $this->db->where('person_id', $id);
 
       $query = $this->db->get();
-      $result = $query->row();
 
-      return $result->last_name;
+      return $query->result_array();
     }
 
     public function check_credentials() {
@@ -60,6 +59,15 @@
         } else 
           return FALSE;
       }
+    }
+
+    public function email_exists() {
+      $this->db->from('student');
+      $this->db->where('email', $this->input->post('email'));
+      if($this->db->count_all_results() > 0)
+        return TRUE;
+      else
+        return FALSE;
     }
 
     public function update($id, $data) {

@@ -9,11 +9,18 @@
   //   echo "<br>";
   // }
 
-  $test = array("first" => "1st value", "second" => "2nd value");
-  echo "UPDATE person SET ";
-  while($value = current($test)) {
-    echo key($test)." = ".$value;
-    echo ", ";
-    next($test);
-  }
+  // $test = array("first" => "1st value", "second" => "2nd value");
+  // echo "UPDATE person SET ";
+  // while($value = current($test)) {
+  //   echo key($test)." = ".$value;
+  //   echo ", ";
+  //   next($test);
+  // }
+
+  // for ($i=1; $i < 21; $i++) { 
+  //   echo '(\''.uniqid().'\', \'8:00 AM\', \'12:00 NN\', \'\', \'\'),';
+  //   echo "<br>";
+  // }
+
+  echo md5('');
 ?>

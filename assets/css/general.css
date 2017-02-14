@@ -1,0 +1,93 @@
+/*Icons Radio*/
+.icons {
+  height: 30em;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.icons label {
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+label > input[type="radio"] {
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute;
+}
+label > input + img { /* IMAGE STYLES */
+  cursor:pointer;
+  width: 128px;
+  height: 128px;
+  filter: grayscale();
+  transition: 200ms all ease;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 4px;
+}
+label > input + img:hover,
+label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+  filter: initial;
+  border: 1px solid #a9a9a9;
+}
+
+/*Scroll Bar Style*/
+.icons::-webkit-scrollbar {
+  width: 8px;
+}
+.icons::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.icons::-webkit-scrollbar-track {
+  background-color: #b9b9b9;
+}
+
+/*Footer*/
+.footer {
+  background-color: #FFFFFF;
+  line-height: 20px;
+}
+
+/*Cards */
+.card-user .avatar {
+  border: 0px;
+}
+
+h4 small {
+  line-height: 0;
+}
+.author {
+  margin-bottom: 10px;
+}
+.card .description {
+  margin: 0;
+  color: #444444;
+}
+.description i {
+  width: 25px;
+  color: #9a9a9a;
+}
+.btn-sm {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 2px 12px;
+  min-width: 90px;
+}
+
+/*Modal*/
+.modal-header {
+  border-bottom: 0;
+}
+.icon img {
+    width: 10em;
+  }
+@media screen and (min-width: 768px) {
+  .icon img {
+    width: 100%;
+  }
+}
+.details .title {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.details .subtitle {
+  margin: 0;
+}

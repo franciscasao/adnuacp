@@ -23,6 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+// $config['base_url'] = 'http://www.adnuacp.com';
 $config['base_url'] = 'http://localhost/adnuacp';
 
 /*
@@ -35,7 +36,7 @@ $config['base_url'] = 'http://localhost/adnuacp';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
