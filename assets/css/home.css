@@ -175,6 +175,8 @@ a:focus {
   display: table-cell;
   vertical-align: middle;
   background: radial-gradient(rgba(130, 130, 130, 0.36), rgba(41, 63, 80, 0.69));
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .middle form {
   max-width: 350px;
@@ -206,7 +208,7 @@ a:focus {
     width: 286px;
   }
 }
-.middle form button[type="submit"] {
+.middle form button[type="submit"], .btn-transparent {
   color: rgba(0, 132, 255, 0.7);
   font-size: 24px;
   background-color: transparent;
@@ -214,7 +216,7 @@ a:focus {
   margin-bottom: 10px;
   transition: 200ms all ease;
 }
-.middle form button[type="submit"]:hover {
+.middle form button[type="submit"]:hover, .btn-transparent:hover {
   color: rgba(0, 132, 255, 0.9);
 }
 .middle form a {
@@ -248,4 +250,32 @@ a:focus {
   margin-top: 10px;
   margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+/*Long */
+.long .form-group label {
+  margin-bottom: 0;
+}
+.long .form-control {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  font-size: 14px;
+  /*height: 38px;*/
+}
+.long .links a {
+  color: #929292;
+  font-size: 13px;
+  margin: 0 auto;
+  transition: 200ms all ease;
+}
+.long img {
+  width: 8em;
+}
+.long .middle form {
+  margin: 0 10px;
+  max-width: initial;
+}
+.long .middle form .form-control {
+  width: 100%;
 }

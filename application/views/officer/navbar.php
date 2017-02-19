@@ -6,9 +6,10 @@
       </div>
 
       <ul class="nav">
-        <li class="active"><a href="<?php echo base_url('index.php/officer/topic'); ?>"><i class="pe-7s-plus"></i><p>New Topic</p></a></li>
-        <li><a href="<?php echo base_url('index.php/officer/topic/list'); ?>"><i class="pe-7s-albums"></i><p>Topic List</p></a></li>
-        <li><a href="<?php echo base_url('index.php/officer/user'); ?>"><i class="pe-7s-id"></i><p>User Profile</p></a></li>
+        <li <?php if($tab == 'New Topic'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('index.php/officer'); ?>"><i class="pe-7s-plus"></i><p>New Topic</p></a></li>
+        <li <?php if($tab == 'Topic List'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('index.php/officer/topic'); ?>"><i class="pe-7s-albums"></i><p>Topic List</p></a></li>
+        <li <?php if($tab == 'Student List'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('index.php/officer/student'); ?>"><i class="pe-7s-users"></i><p>Student List</p></a></li>
+        <li <?php if($tab == 'User Profile'){ echo 'class="active"'; } ?>><a href="<?php echo base_url('index.php/officer/user'); ?>"><i class="pe-7s-id"></i><p>User Profile</p></a></li>
         <li><a href="<?php echo base_url('index.php/logout'); ?>"><i class="pe-7s-power"></i><p>Log out</p></a></li>
       </ul>
     </div>
@@ -24,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">New Topic</a>
+          <a class="navbar-brand" href="#"><?php echo $tab; ?></a>
         </div>
         <div class="collapse navbar-collapse">
           <?php if (isset($type[1])): ?>

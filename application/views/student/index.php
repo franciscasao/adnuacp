@@ -1,6 +1,7 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
+      <?php $c = 1; ?>
       <?php if (count($topic) > 0): ?>
       <?php $offset = TRUE; ?>
       <?php foreach ($topic as $topic_item): ?>
@@ -34,20 +35,29 @@
               <?php foreach ($topic_item["schedule"] as $schedule): ?>
                 <div class="<?php echo $class; ?>">
                   <p class="description"><?php echo $schedule["start_time"]." - ".$schedule["end_time"]; ?></p>
-                  <div class="label <?php echo $schedule["slots"] > 1 ? 'label-info' : 'label-danger' ?>" style="display: block; width: 6em; margin: 0 auto;">
+                  <div class="label <?php echo $schedule["slots"] > 0 ? 'label-info' : 'label-danger' ?>" style="display: block; width: 6em; margin: 0 auto;">
                     <?php echo $schedule["slots"] < 1 ? 'Closed' : $schedule["slots"].' Slots'; ?>
                   </div>
-                  <button onclick="window.location.href='<?php echo base_url('index.php/student/join/'.$schedule['id']) ?>'" class="btn btn-info btn-fill btn-sm" <?php if($schedule["slots"] < 1){echo 'disabled';} ?>>Register</button>
+                  <?php if ($schedule["slots"] > 0): ?>
+                    <button onclick="window.location.href='<?php echo base_url('index.php/student/join/'.$schedule['id']) ?>'" class="btn btn-info btn-fill btn-sm" <?php if($schedule["slots"] < 1){echo 'disabled';} ?>>Register</button>
+                  <?php endif ?>                  
                 </div>
               <?php endforeach ?>
             </div>
             <hr>
             <div class="text-center">
-              <button data-container="body" data-toggle="popover" data-placement="left" class="btn btn-simple" data-content="<?php echo $topic_item["description"] ?>" data-trigger="focus | hover"><i class="fa fa-plus"></i> Details</button>
+              <button data-container="body" data-toggle="popover" data-placement="top" class="btn btn-simple" data-content="<?php echo $topic_item["description"] ?>" data-trigger="focus | hover"><i class="fa fa-plus"></i> Details</button>
             </div>
           </div>
         </div>
+        <?php if ($c % 3 == 0): ?>
+          <div class="clearfix visible-md visible-lg"></div>  
+        <?php endif ?>
+        <?php if ($c % 2 == 0): ?>
+          <div class="clearfix visible-sm"></div>  
+        <?php endif ?>
         <?php $offset = !$offset; ?>
+        <?php $c++; ?>
       <?php endforeach ?>
       <?php endif ?>
       <?php if (count($topic) == 0): ?>

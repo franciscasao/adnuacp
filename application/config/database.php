@@ -70,10 +70,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'default';
+$active_group = 'localhost';
+// $active_group = 'adnuacp';
 $query_builder = TRUE;
 
-$db['default'] = array(
+$db['localhost'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
@@ -99,7 +100,7 @@ $db['adnuacp'] = array(
 	'dsn'	=> '',
 	'hostname' => '148.72.232.169:3306',
 	'username' => 'adnussg',
-	'password' => 'Emz5b1!6',
+	'password' => 'hX?ye615',
 	'database' => 'acp',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

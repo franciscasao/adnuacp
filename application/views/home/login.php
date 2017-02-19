@@ -21,13 +21,21 @@
         </div>
         <?php $this->session->unset_userdata('error'); ?>
       <?php endif ?>
+      <?php $tmp = $this->session->userdata('message'); ?>
+      <?php if (!empty($tmp)): ?>
+        <div class="alert alert-info fade in message">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>Success!</strong> <?php echo $this->session->userdata('message'); ?>
+        </div>
+        <?php $this->session->unset_userdata('message'); ?>
+      <?php endif ?>
       <input type="text" name="id" class="form-control" placeholder="ID Number (ex. 201311234)" value="<?php echo set_value('id'); ?>" required>
       <input type="password" name="password" class="form-control" placeholder="Password" required>
       <button type="submit" class="btn">Sign In</button>
       <br>
       <a href="<?php echo base_url('index.php/reset'); ?>">Forgot Password?</a>
       <br>
-      <a role="button" data-toggle="modal" data-target=".modal">Need an account?</a>
+      <a role="button" href="<?php echo base_url('index.php/register') ?>">Need an account?</a>
     <?php echo form_close(); ?>
   </div>
   <div class="carousel-inner" role="listbox">

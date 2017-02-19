@@ -14,20 +14,15 @@
 
     <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>" rel="stylesheet" />
-    <link href="<?php echo base_url('assets/css/animate.min.css'); ?>" rel="stylesheet"/>
     <link href="<?php echo base_url('assets/css/pe-icon-7-stroke.css'); ?>" rel="stylesheet"/>
-    <?php if ($title != 'ACP'): ?>
-      <?php if ($title != 'Reset Password'): ?>
-        <link href="<?php echo base_url('assets/css/light-bootstrap-dashboard.css'); ?>" rel="stylesheet"/>
-      <?php endif ?>
+    <link href="<?php echo base_url('assets/css/fresh-bootstrap-table.css'); ?>" rel="stylesheet"/>
+    <?php if ($title != 'ACP' && $title != 'Reset Password' && $title != 'Change Password' && $title != 'Registration' && $title != 'Verify Email'): ?>
+      <link href="<?php echo base_url('assets/css/animate.min.css'); ?>" rel="stylesheet"/>
+      <link href="<?php echo base_url('assets/css/light-bootstrap-dashboard.css'); ?>" rel="stylesheet"/>
     <?php endif ?>
-    <?php if ($title == 'ACP' || $title == 'Reset Password'): ?>
+    <?php if ($title == 'ACP' || $title == 'Reset Password' || $title == 'Change Password' || $title == 'Registration' || $title == 'Verify Email'): ?>
       <link href="<?php echo base_url('assets/css/home.css'); ?>" rel="stylesheet" />
     <?php endif ?>
     <link href="<?php echo base_url('assets/css/general.css'); ?>" rel="stylesheet"/>
   </head>
   <body>
-  <?php
-
-$config['sess_save_path'] = BASEPATH.'application\cache\\';
-  ?>

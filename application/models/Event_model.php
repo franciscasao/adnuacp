@@ -25,6 +25,26 @@
       return $result;
     }
 
+    public function retrieve_event_details($id) {
+      $this->db->select('*');
+      $this->db->from('event');
+      $this->db->where('id', $id);
+
+      $query = $this->db->get();
+      $tmp['details'] = $query->row_array();
+
+      $this->db->select('*');
+      $this->db->from('schedule');
+      $this->db->where('event_id', $id);
+
+      $query = $this->db->get();
+      $tmp['schedule'] = $query->result_array();
+
+      $this->db->selec6
+
+      return $tmp;
+    }
+
     public function get_schedule($id) {
       $this->db->select('*');
       $this->db->from('schedule');

@@ -14,25 +14,6 @@
                   <div class="form-group icons">
                     <label>Icon (required)</label>
                     <div class="icons text-center">
-                      <label><input type="radio" name="icon" value="anchor"><img src="<?php echo base_url('assets/img/icons/anchor.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="aperture"><img src="<?php echo base_url('assets/img/icons/aperture.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="arrow-up"><img src="<?php echo base_url('assets/img/icons/arrow-up.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="arrow-down"><img src="<?php echo base_url('assets/img/icons/arrow-down.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="art"><img src="<?php echo base_url('assets/img/icons/art.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="barchart"><img src="<?php echo base_url('assets/img/icons/barchart.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="batteryfull"><img src="<?php echo base_url('assets/img/icons/batteryfull.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="batterylow"><img src="<?php echo base_url('assets/img/icons/batterylow.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="bike"><img src="<?php echo base_url('assets/img/icons/bike.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="biker"><img src="<?php echo base_url('assets/img/icons/biker.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="blimp"><img src="<?php echo base_url('assets/img/icons/blimp.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="bolt"><img src="<?php echo base_url('assets/img/icons/bolt.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="bomb"><img src="<?php echo base_url('assets/img/icons/bomb.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="booklet"><img src="<?php echo base_url('assets/img/icons/booklet.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="bookshelf"><img src="<?php echo base_url('assets/img/icons/bookshelf.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="briefcase"><img src="<?php echo base_url('assets/img/icons/briefcase.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="brightness"><img src="<?php echo base_url('assets/img/icons/brightness.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="browser"><img src="<?php echo base_url('assets/img/icons/browser.png'); ?>"></label>
-                      <label><input type="radio" name="icon" value="brush-pencil"><img src="<?php echo base_url('assets/img/icons/brush-pencil.png'); ?>"></label>
                     </div>                      
                   </div>
                 </div>

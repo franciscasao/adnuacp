@@ -91,3 +91,23 @@ h4 small {
 .details .subtitle {
   margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .col-sm-5 {
+    padding: 0;
+  }
+}
+
+label.error {
+  color: red;
+  font-size: 13.3px;
+  text-transform: none;
+}
+
+.fresh-table .fixed-table-toolbar .pull-right .btn {
+  border-width: 1px;
+}
+.pull-right.search .form-control {
+  opacity: 1;
+  border-color: #9f9f9f;
+}

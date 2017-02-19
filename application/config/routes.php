@@ -49,16 +49,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['course/major_option'] = 'course/major_option';
+$route['course/course_option'] = 'course/course_option';
+$route['course/department_option'] = 'course/department_option';
+
 $route['student/download'] = 'student/download_ticket';
 $route['student/join/(:any)'] = 'student/join/$1';
 $route['student/switch/(:any)'] = 'student/switch_type/$1';
 
+$route['officer/edit/(:any)'] = 'officer/edit_student/$1';
+$route['officer/topic/(:any)'] = 'officer/topic_item/$1';
+$route['officer/topic'] = 'officer/list_topic';
 $route['officer/switch/(:any)'] = 'officer/switch_type/$1';
+$route['officer/student'] = 'officer/list_student';
 $route['officer'] = 'officer';
 
+$route['reset/(:any)/(:any)'] = 'home/change_pass/$1/$2';
+$route['verify/(:any)/(:any)'] = 'home/verify/$1/$2';
+$route['success'] = 'home/success_register';
+$route['register'] = 'home/register';
 $route['reset'] = 'home/reset';
 $route['logout'] = 'home/logout';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
